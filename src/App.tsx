@@ -1,25 +1,15 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import Player from "@mux/mux-player-react";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Player
+      src={
+        "https://stream.mux.com/01b2r4H6Pg8Q01NJZGppCu6X6tmfP6f6Jtp5oFZaETUwU.m3u8"
+      }
+      preload="metadata"
+      debug={true}
+      _hlsConfig={{ debug: true }}
+    />
   );
 }
 
